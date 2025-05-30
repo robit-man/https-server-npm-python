@@ -1,5 +1,9 @@
 # HTTPS Server - Automatic deployment and cert issuance
 
+```bash
+python3 app.py
+```
+
 
     It will find your Fastify / Node app folder (wherever you cloned it).
 
