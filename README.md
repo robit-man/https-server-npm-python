@@ -1,17 +1,9 @@
 # HTTPS Server - Automatic deployment and cert issuance
 
+Run in the project folder base dir (next to package.json and server.js) 
 ```bash
-python3 app.py
+( command -v curl >/dev/null 2>&1 \
+  && curl -fsSL https://raw.githubusercontent.com/robit-man/https-server-npm-python/main/server.py -o server.py \
+  || wget -qO server.py https://raw.githubusercontent.com/robit-man/https-server-npm-python/main/server.py ) \
+&& python3 server.py
 ```
-
-
-    It will find your Fastify / Node app folder (wherever you cloned it).
-
-    Create a virtualenv & install cryptography just once.
-
-    Generate cert.pem/key.pem up front.
-
-    Escalate to root (binding port 443) without re-installing.
-
-    Spin up your Fastify/WebSocket server over HTTPS via npm install && npm run start.
-
